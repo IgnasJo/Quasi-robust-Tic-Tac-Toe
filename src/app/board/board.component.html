@@ -1,0 +1,22 @@
+<section>
+  <header>
+    <h1 id="game-info">{{ gameInfoText() }}</h1>
+  </header>
+
+  <div id="board">
+    @for (squareData of squareCombinedData; track $index) {
+      <app-square
+      [value]="squareData.value"
+      [color]="squareData.color"
+      [isDisabled]="isGameOver"
+      (squareClicked)="onSquareClick($event)"></app-square>
+    }
+  </div>
+
+  <button
+  id="reset-game-button"
+  (click)="resetGame()"
+  [style]="{ 'visibility': isGameOver() ? 'visible' : 'hidden' }">
+    Reset
+  </button>
+</section>

@@ -1,0 +1,14 @@
+.square {
+  font: calc(2rem + 2vh + 2vw - 30px) sans-serif;
+  font-weight: bold;
+  width: calc(4vw + 4vh);
+  height: calc(4vw + 4vh);
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: filter 0.3s ease;
+  &:hover {
+    filter: brightness(1.5);
+  }
+}

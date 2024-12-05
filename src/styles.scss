@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'mixins' as mix;
+
+html, body, app-root {
+  height: 100%;
+}
+
+app-root {
+  @include mix.flex-column;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,6 @@
+<button class="square-dynamic square"
+[style]="{ 'background-color': color() }"
+(click)="onClick()"
+[disabled]="isDisabled()">
+  {{ value() }}
+</button>

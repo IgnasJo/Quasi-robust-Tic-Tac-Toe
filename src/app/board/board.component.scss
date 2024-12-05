@@ -1,0 +1,46 @@
+@use '../../mixins' as mix;
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  min-height: calc(3vh + 2rem);
+  word-wrap: break-word;
+  font: calc(1rem + 0.5vh + 0.5vw - 10px) sans-serif;
+}
+
+#game-info {
+  margin: 0;
+}
+
+section {
+  @include mix.flex-column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100%;
+  background-color: black;
+}
+
+#reset-game-button {
+  color: white;
+  font: calc(1rem + 0.5vh + 0.5vw - 10px) sans-serif;
+  background-color: transparent;
+  border: 1px solid white;
+  padding: calc(0.2rem + 0.2vh + 0.2vw);
+  margin-top: 2vh;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: darkred;
+  }
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
